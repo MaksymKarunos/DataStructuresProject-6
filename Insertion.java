@@ -1,6 +1,21 @@
+/*************************************************************************
+ *
+ *  Pace University
+ *  Fall 2019
+ *  Data Structures and Algorithms
+ *
+ *  Input: NONE
+ *  Output: NONE
+ *
+ *  Visible data fields:
+ *  NONE
+ *
+ *  Visible methods:
+ *  static void sort(int arr[]) 
+ *************************************************************************/
 public class Insertion{
-    static void sort(int arr[]) 
-    { 
+    //Implementation of insertion sort
+    static void sort(int arr[]) { 
         int n = arr.length; 
         for (int i = 1; i < n; ++i) { 
             int key = arr[i]; 
