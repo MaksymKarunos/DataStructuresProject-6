@@ -50,6 +50,26 @@
  *  *   PAULA |||||||||||||||| ATENTION!!!! AHTUNG |||||||||||||||||||||
  *  *   PAULA |||||||||||||||| ATENTION!!!! AHTUNG |||||||||||||||||||||
  * 
+ * 
+ * 
+ * NOTE: 
+ * 1 - Insertion Sort 
+ * 2a - QuickSort (firtst element is the pivot)
+ * 2b - QuickSort (media of 3)
+ * n = 14000
+ * 
+ *   Version | increasing order | decreasing order | random     |
+ *      1    | 129745896        |  111582          |  82319708  |
+ *      2a   | 111582           |  33707794        |  2890248   | 
+ *      2b   | 9536567          |  10860421        |  14344177  | 
+ * 
+ * BIG-O expected 
+ * 
+ *   Version | increasing order | decreasing order | random     |
+ *      1    |     O(n)         |      O(n^2)      | O(n^2)     | 
+ *      2a   |     O(n^2)       |     O(n^2)       | O(nlog(n)) |
+ *      2b   |     O(nlog(n))   |     O(nlog(n))   | O(nlog(n)) |  
+ * 
  *
  *
  *************************************************************************/
@@ -77,7 +97,7 @@ public class Project{
          // 
         }
         for ( int i = 0; i < n; i++){
-            c[i] = myRandom.nextInt(Integer.MAX_VALUE);
+            c[i] = myRandom.nextInt(n);
     }
 }
 
@@ -122,6 +142,24 @@ public class Project{
 
         // REINITIALIZING OBJECTS
         reinitializing(ascedningOrder, decendingOrder, randomOrder, n, myRandom);
+
+        // QUICKSORT | LEFTMOST (first) |  RANDOM 
+        startTime = System.nanoTime();
+        QuickSort.leftQuickSort(randomOrder,0,randomOrder.length-1);
+        endTime = System.nanoTime();
+        System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of random numberss");
+        //Project.printArray(ascedningOrder); 
+        // QUICKSORT | LEFTMOST (first)  |  ASCENDING 
+        startTime = System.nanoTime();
+        QuickSort.leftQuickSort(ascedningOrder,0,ascedningOrder.length-1);
+        endTime = System.nanoTime();
+        System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of ascending numberss");
+        //Project.printArray(ascedningOrder); 
+        // QUICKSORT | LEFTMOST (first) |  DESCEDNING 
+        startTime = System.nanoTime();
+        QuickSort.leftQuickSort(decendingOrder,0,decendingOrder.length-1);
+        endTime = System.nanoTime();
+        System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of descending numberss");
         
         //Project.printArray(decendingOrder);
         // QUICKSORT | MEDIAN OF 3  |  RANDOM 
@@ -148,23 +186,6 @@ public class Project{
 
         //Project.printArray(decendingOrder);
 
-        // QUICKSORT | MEDIAN OF 3  |  RANDOM 
-        startTime = System.nanoTime();
-        QuickSort.leftQuickSort(randomOrder,0,randomOrder.length-1);
-        endTime = System.nanoTime();
-        System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of random numberss");
-        //Project.printArray(ascedningOrder); 
-        // QUICKSORT | MEDIAN OF 3  |  ASCENDING 
-        startTime = System.nanoTime();
-        QuickSort.leftQuickSort(ascedningOrder,0,ascedningOrder.length-1);
-        endTime = System.nanoTime();
-        System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of ascending numberss");
-        //Project.printArray(ascedningOrder); 
-        // QUICKSORT | MEDIAN OF 3  |  DESCEDNING 
-        startTime = System.nanoTime();
-        QuickSort.leftQuickSort(decendingOrder,0,decendingOrder.length-1);
-        endTime = System.nanoTime();
-        System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of descending numberss");
 
         //Project.printArray(decendingOrder);
 
