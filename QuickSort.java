@@ -30,7 +30,7 @@ public class QuickSort{
 
 		}
     }
-    // Using firt (leftmost) element as the pivot | worst pivot
+    // Using first (leftmost) element as the pivot | worst pivot
     public static void leftQuickSort(int arr[], int low, int high) {
 
 		if (low < high -1 ) {
