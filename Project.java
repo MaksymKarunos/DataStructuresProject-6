@@ -11,7 +11,7 @@
  *
  *  Assignment: 6
  *  Problem: Analyzing QuickSort vs Insertion Sort vs Library Sort
- *  Description: Analyzing time and space complexity of three very famos sorts and their best/average/worse cases. Comparing assumptions with experimental running times.
+ *  Description: Analyzing time and space complexity of three very famos sorts and their best/average/worse cases
  *
  *  Input: n
  *  Output: time taken to sort by a given sort
@@ -24,8 +24,8 @@
 
         long startTime = 0;
         long endTime = 0; 
-        int[] decendingOrder = new int[n];
-        int[] ascedningOrder = new int[n];
+        int[] descendingOrder = new int[n];
+        int[] ascendingOrder = new int[n];
         int[] randomOrder = new int[n];
  *
  *  Visible methods:
@@ -120,34 +120,34 @@ public class Project{
 
         long startTime = 0;
         long endTime = 0; 
-        int[] decendingOrder = new int[n];
-        int[] ascedningOrder = new int[n];
+        int[] descendingOrder = new int[n];
+        int[] ascendingOrder = new int[n];
         int[] randomOrder = new int[n];
 
-        reinitializing(ascedningOrder, decendingOrder, randomOrder, n, myRandom);
+        reinitializing(ascendingOrder, descendingOrder, randomOrder, n, myRandom);
 
         //  UNCOMMENT THE LINE BELOW TO CHECK THE ORDER 
-        // Project.printArray(decendingOrder);
+        // Project.printArray(descsendingOrder);
         // INSERTION  |  RANDOM 
         startTime = System.nanoTime();
         Insertion.sort(randomOrder);
         endTime = System.nanoTime();
-        System.out.println("INSERTION SORT:" + " It took " + (endTime-startTime) + " nano" + " to sort an array of random numbers");
+        System.out.println("INSERTION SORT:" + " It took " + (endTime-startTime) + " nano" + " to sort an array of random numberss");
 
         // INSERTION  |  ASCENDING 
         startTime = System.nanoTime();
-        Insertion.sort(ascedningOrder);
+        Insertion.sort(ascendingOrder);
         endTime = System.nanoTime();
-        System.out.println("INSERTION SORT:" + " It took " + (endTime-startTime) + " nano" + " to sort an array of ascending numbers");
+        System.out.println("INSERTION SORT:" + " It took " + (endTime-startTime) + " nano" + " to sort an array of ascending numberss");
 
         // INSERTION  |  DESCEDNING 
         startTime = System.nanoTime();
-        Insertion.sort(decendingOrder);
+        Insertion.sort(descendingOrder);
         endTime = System.nanoTime();
-        System.out.println("INSERTION SORT:" + " It took " + (endTime-startTime) + " nano" + " to sort an array of descending numbers");
+        System.out.println("INSERTION SORT:" + " It took " + (endTime-startTime) + " nano" + " to sort an array of descending numberss");
 
         //  UNCOMMENT THE LINE BELOW TO CHECK THE ORDER 
-        // Project.printArray(decendingOrder); 
+        // Project.printArray(descendingOrder); 
 
         // REINITIALIZING OBJECTS
         reinitializing(ascendingOrder, descendingOrder, randomOrder, n, myRandom);
@@ -157,46 +157,46 @@ public class Project{
         QuickSort.leftQuickSort(randomOrder,0,randomOrder.length-1);
         endTime = System.nanoTime();
         System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of random numbers");
-        //Project.printArray(ascedningOrder); 
+        //Project.printArray(ascendingOrder); 
         // QUICKSORT | LEFTMOST (first)  |  ASCENDING 
         startTime = System.nanoTime();
-        QuickSort.leftQuickSort(ascendingOrder,0,ascendingOrder.length-1);
+        QuickSort.leftQuickSort(ascedningOrder,0,ascedningOrder.length-1);
         endTime = System.nanoTime();
         System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of ascending numbers");
-        //Project.printArray(ascedningOrder); 
+        //Project.printArray(ascendingOrder); 
         // QUICKSORT | LEFTMOST (first) |  DESCEDNING 
         startTime = System.nanoTime();
         QuickSort.leftQuickSort(descendingOrder,0,descendingOrder.length-1);
         endTime = System.nanoTime();
         System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of descending numbers");
         
-        //Project.printArray(decendingOrder);
+        //Project.printArray(descendingOrder);
         // QUICKSORT | MEDIAN OF 3  |  RANDOM 
         startTime = System.nanoTime();
         QuickSort.medianQuickSort(randomOrder,0,randomOrder.length-1);
         endTime = System.nanoTime();
         System.out.println("[MEDIAN OF 3] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of random numbers");
-        //Project.printArray(ascedningOrder); 
+        //Project.printArray(ascendingOrder); 
         // QUICKSORT | MEDIAN OF 3  |  ASCENDING 
         startTime = System.nanoTime();
-        QuickSort.medianQuickSort(ascendingOrder,0,ascendingOrder.length-1);
+        QuickSort.medianQuickSort(ascedningOrder,0,ascedningOrder.length-1);
         endTime = System.nanoTime();
-        System.out.println("[MEDIAN OF 3] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of ascending numberss");
-        //Project.printArray(ascedningOrder); 
+        System.out.println("[MEDIAN OF 3] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of ascending numbers");
+        //Project.printArray(ascendingOrder); 
         // QUICKSORT | MEDIAN OF 3  |  DESCEDNING 
         startTime = System.nanoTime();
         QuickSort.medianQuickSort(descendingOrder,0,descendingOrder.length-1);
         endTime = System.nanoTime();
-        System.out.println("[MEDIAN OF 3] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of descending numberss");
+        System.out.println("[MEDIAN OF 3] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of descending numbers");
         
-        //Project.printArray(decendingOrder);
+        //Project.printArray(descendingOrder);
         // REINITIALIZING OBJECTS
         reinitializing(ascendingOrder, descendingOrder, randomOrder, n, myRandom);
 
-        //Project.printArray(decendingOrder);
+        //Project.printArray(descendingOrder);
 
 
-        //Project.printArray(decendingOrder);
+        //Project.printArray(descendingOrder);
 
         myScanner.close();
         
