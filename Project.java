@@ -160,7 +160,7 @@ public class Project{
         //Project.printArray(ascendingOrder); 
         // QUICKSORT | LEFTMOST (first)  |  ASCENDING 
         startTime = System.nanoTime();
-        QuickSort.leftQuickSort(ascedningOrder,0,ascedningOrder.length-1);
+        QuickSort.leftQuickSort(ascendingOrder,0,ascendingOrder.length-1);
         endTime = System.nanoTime();
         System.out.println("[LEFTMOSE ELEMENT - PIVOT] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of ascending numbers");
         //Project.printArray(ascendingOrder); 
@@ -179,7 +179,7 @@ public class Project{
         //Project.printArray(ascendingOrder); 
         // QUICKSORT | MEDIAN OF 3  |  ASCENDING 
         startTime = System.nanoTime();
-        QuickSort.medianQuickSort(ascedningOrder,0,ascedningOrder.length-1);
+        QuickSort.medianQuickSort(ascendingOrder,0,ascendingOrder.length-1);
         endTime = System.nanoTime();
         System.out.println("[MEDIAN OF 3] QuickSort:" + " It took " + (endTime-startTime) + " nanoseconds" + " to sort an array of ascending numbers");
         //Project.printArray(ascendingOrder); 
